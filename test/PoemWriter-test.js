@@ -65,7 +65,7 @@ describe("<PoemWriter />", () => {
       wrapper
         .find("textarea")
         .simulate("change", { target: { value: VALID_POEM } });
-      console.log(VALID_POEM, wrapper.state().poem, wrapper.state().valid);
+      // console.log(VALID_POEM, wrapper.state().poem, wrapper.state().valid);
       expect(wrapper.find("#poem-validation-error").length).to.equal(
         0,
         "The poem validation error is being shown"

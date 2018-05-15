@@ -11,7 +11,7 @@ class PoemWriter extends React.Component {
   }
 
   handleInput = e => {
-    let lines = this.state.poem.trim().split("\n");
+    let lines = e.target.value.trim().split("\n");
 
     let firstLine =
       lines.length === 3 ? lines[0].trim().split(" ").length : false;
@@ -30,12 +30,14 @@ class PoemWriter extends React.Component {
         ? true
         : false;
 
-    console.log(valid);
-
-    this.setState({
-      poem: e.target.value,
-      valid: valid
-    });
+    let poem = e.target.value;
+    this.setState(
+      {
+        poem,
+        valid: valid
+      },
+      () => console.log(this.state)
+    );
   };
 
   render() {
