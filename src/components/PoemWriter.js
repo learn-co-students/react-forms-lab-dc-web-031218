@@ -30,6 +30,8 @@ class PoemWriter extends React.Component {
         ? true
         : false;
 
+    console.log(valid);
+
     this.setState({
       poem: e.target.value,
       valid: valid

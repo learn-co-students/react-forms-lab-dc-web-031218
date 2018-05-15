@@ -12,7 +12,7 @@ class LoginForm extends React.Component {
 
   handleInput = e => {
     // e.persist();
-    console.log(e.target);
+    // console.log(e.target);
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -32,6 +32,7 @@ class LoginForm extends React.Component {
           <label>
             Username
             <input
+              id="test-username"
               name="username"
               type="text"
               value={this.state.username}
@@ -43,6 +44,7 @@ class LoginForm extends React.Component {
           <label>
             Password
             <input
+              id="test-password"
               name="password"
               type="password"
               value={this.state.password}
